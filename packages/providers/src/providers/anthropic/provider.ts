@@ -116,6 +116,9 @@ export class AnthropicProvider extends BaseProvider {
 			newHeaders.set("x-api-key", apiKey);
 		}
 
+		// Add anthropic-beta header for extended context support
+		newHeaders.set("anthropic-beta", "context-1m-2025-08-07");
+
 		// Remove host header
 		newHeaders.delete("host");
 
